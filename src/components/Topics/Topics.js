@@ -4,7 +4,7 @@ import Topic from '../Topic/Topic';
 import './Topics.css';
 
 const Topics = () => {
-    const topics = useLoaderData()
+    const topics = useLoaderData();
     return (
             <div className="home-container">
                 <div className='home-display'>
@@ -12,7 +12,7 @@ const Topics = () => {
                 </div>
                 <div className='topic-container'>
                     {
-                        topics.map(topic => <Topic
+                        topics.data.map(topic => <Topic
                             key={topic.id}
                             topic={topic}
                         ></Topic>)

@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Blog from './components/Blog/Blog';
+import Questions from './components/Questions/Questions';
 import Statistics from './components/Statistics/Statistics';
 import Topics from './components/Topics/Topics';
 import Main from './layouts/Main';
@@ -13,7 +14,7 @@ function App() {
       children: [
         {
           path: '/',
-          loader: () => fetch('topics.json'),
+          loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
           element: <Topics></Topics>
         },
         {
@@ -23,8 +24,20 @@ function App() {
         {
           path: '/blog',
           element: <Blog></Blog>
+        },
+        {
+          path: '/quiz/:quizId',
+          loader: async ({params}) =>{
+            // console.log(params.quizId)
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`)
+          },
+          element: <Questions></Questions>
         }
       ]
+    },
+    {
+      path: '*',
+      element: <div>This route Not found</div>
     }
   ]);
   return (
