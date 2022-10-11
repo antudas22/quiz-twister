@@ -1,0 +1,15 @@
+.home-display{
+    background-image: url(../../../public/home-background.jpg);
+    height: 100%;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+.home-display h2{
+    margin-left: 100px;
+}
+.topic-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 100px;
+}
