@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Blog from './components/Blog/Blog';
+import Error from './components/Error/Error';
 import Questions from './components/Questions/Questions';
 import Statistics from './components/Statistics/Statistics';
 import Topics from './components/Topics/Topics';
@@ -37,7 +38,7 @@ function App() {
     },
     {
       path: '*',
-      element: <div>This route Not found</div>
+      element: <Error></Error>
     }
   ]);
   return (

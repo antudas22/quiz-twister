@@ -1,0 +1,25 @@
+.error-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.error{
+    text-align: center;
+}
+.error h1{
+    font-size: 200px;
+    margin-bottom: 0;
+    color: darkcyan;
+}
+.error p{
+    font-size: 18px;
+    font-weight: 600;
+}
+.error button{
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-color: darkcyan;
+    border: none;
+}
