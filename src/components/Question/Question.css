@@ -32,3 +32,16 @@
 .show{
     text-align: center;
 }
+
+@media screen and (max-width: 767px) {
+    .questions-container{
+        width: 85%;
+    }
+    .option{
+        width: 250px;
+        height: 60px;
+    }
+    .option p{
+        font-size: 10px;
+    }
+}

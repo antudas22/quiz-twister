@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
@@ -9,9 +9,10 @@ const Header = () => {
                 <h1>Quiz Twister</h1>
             </div>
             <div>
-                <Link to='/'>Topics</Link>
-                <Link to='/statistics'>Statistics</Link>
-                <Link to='/blog'>Blog</Link>
+                <NavLink className={({isActive}) => isActive ? 'active' : undefined} to='/'></NavLink>
+                <NavLink className={({isActive}) => isActive ? 'active' : undefined} to='/topics'>Topics</NavLink>
+                <NavLink to='/statistics'>Statistics</NavLink>
+                <NavLink to='/blog'>Blog</NavLink>
             </div>
         </nav>
     );

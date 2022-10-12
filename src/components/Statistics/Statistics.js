@@ -9,8 +9,12 @@ const Statistics = () => {
     return (
         <div className='chart-container'>
             <div className='line-chart'>
-            <h2>Quiz Analytics</h2>
-            <hr />
+            <div className='quiz-analytics'>
+                <div>
+                <h2>Quiz Analytics</h2>
+                    <hr />
+                </div>
+            </div>
             <LineChart width={700} height={450} data={datas.data}>
                 <Line type="monotone" dataKey='total'stroke="#82ca9d" />
                 <XAxis dataKey="name" />
